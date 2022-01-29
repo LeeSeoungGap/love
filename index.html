@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js demo-1">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>유경♥</title>
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
+		<!-- custom demo style -->
+		<link rel="stylesheet" type="text/css" href="css/demo1.css" />
+		<link rel="stylesheet" href="js/player/dist/jquery.button-audio-player.css" />
+		<link rel="stylesheet" href="js/YTPlayer/dist/css/jquery.mb.YTPlayer.min.css">
+		<script src="js/modernizr.custom.js"></script>
+		<style>
+			@font-face {
+			    font-family: 'KOTRAHOPE';
+			    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+			    font-weight: normal;
+			    font-style: normal;
+			}
+			* {
+				 font-family: "KOTRAHOPE";
+			}
+			.bap-btn {
+				width: 50px !important;
+    			height: 25px !important;
+    			border-radius: unset;
+    			background: pink;
+			}
+			#bar {
+				display: inline;
+				padding-left: 25px;
+			}
+			body {
+				overflow: hidden;
+			}
+			.page {
+				text-align: left;
+				width : auto !important;
+				padding-left: 25px;
+				font-size: 15pt;
+
+			}
+			.page span {
+				width : auto !important;
+			}
+			.bb-item img {
+				width : 100%;
+				height: auto;
+				object-fit: cover;
+			}
+			.bb-page img{
+				width : 100%;
+				height: auto;
+			}
+			.bb-custom-wrapper {
+				width : auto;
+				max-width : 420px;
+			}
+			.bb-bookblock {
+				height : 430px;
+			}
+			
+			@media only screen and (max-device-width: 768px) {
+				* {
+				 	font-family: "KOTRAHOPE";
+				 	font-size: 12pt;
+				}
+			    .bb-bookblock {
+					width : auto;
+					height : 360px;
+				}	
+			}
+			
+			.container > header {
+			    margin: 0 auto;
+			    padding-top: 2em;
+			    padding-left: 2em;
+			    padding-right: 2em;
+			    padding-bottom: 10px;
+			}
+			.main {
+				padding-top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Top Navigation -->
+			<header>
+				<h1><a href="./index.html">그대라는 동화</a><span>a fairy tale called you</span></h1>	
+			</header>
+			<div class="main clearfix">
+				<div class="bb-custom-wrapper">
+					<h3>Writer <a href="#">Lee Seung-gap</a><div id="bar"></div></h3>
+					<div id="bb-bookblock" class="bb-bookblock">
+						<div class="bb-item">
+							<a>
+								<img src="images/1page.png" alt="image01"/>
+								<div class="page" id="page1">
+									<span></br></span>
+								</div>   
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/2.png" alt="image02"/>
+								<div class="page" id="page2">
+								   <span>7월 29일, 처음 그녀에게 연락했어요.
+								   <br/>그녀는 초록색 벌레와 싸우고 있었죠.
+								   <br/>어린애 같은 그녀가 귀여웠어요.</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/3.png" alt="image03"/>
+								<div class="page" id="page3">
+								   <span>8월 21일, 처음 그녀에게 만났어요.
+								   <br/>너무 예뻐서 눈도 못마주쳤죠.
+								   <br/>그녀 앞에서 내가 너무 부족해보여요.
+								   <br/>어떻하죠?</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/4.png" alt="image04"/>
+								<div class="page" id="page4">
+								   <span>8월 24일, 오랜만에 옷을 샀어요.
+								   <br/>그녀에게 단정하게 보이려고 샀지만 좀 어색하네요
+								   <br/>그래도 새로산 청바지는 맘에들었어요.</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/5.png" alt="image05"/>
+								<div class="page" id="page5">
+								   <span>8월 28일, 처음 그녀와 데이트하는 날이예요.
+								   <br/>자동차 극장이란 곳을 갔어요.
+								   <br/>그녀는 존댓말이 편하다고 하네요.
+								   <br/>제가 아직은 불편한 걸까요?</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/6.png" alt="image05"/>
+								<div class="page" id="page6">
+								   <span>9월 9일, 그녀가 오늘은 술을 먹는다고 했어요
+								   <br/>술잘 못먹는다고 했는데.. 연락도 없네요.
+								   <br/>걱정되네요....</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/8.png" alt="image05"/>
+								<div class="page" id="page8">
+								   <span>9월 21일, 추석이예요! 잠깐 그녀를 보러갈꺼예요.
+								   <br/>아침 일찍 그녀에게 주려고 뒷산에서 밤도 주웠놨어요.
+								   <br/>그녀가 처음으로 내가 좋다고 말했어요.
+								   <br/>집으로 돌아가는 차안에서 웃음이 멈추지 않아요.</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/9.png" alt="image05"/>
+								<div class="page" id="page9">
+								   <span>9월 24일, 그녀가 약속을 취소했어요.
+								   <br/>무슨일이 있는걸까요?
+								   <br/>그래도 혹시 모르니까 이번주에도 내려갈꺼에요.</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/10.png" alt="image05"/>
+								<div class="page" id="page10">
+								   <span>9월 25일, 그녀가 당분간 연락하지말자고 하네요..
+								   <br/>내가 그녀의 맘을 아프게 했다니..
+								   <br/>어떻게 해야할지 모르겠어요.
+								   <br/>하나님 도와주세요.. 착하게 살께요</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/11.png" alt="image05"/>
+								<div class="page" id="page11">
+								   <span>9월 29일, 며칠동안 핸드폰만 만지작거려요.
+								   <br/>일도 손에 안잡혀요.
+								   <br/>안되겠어요, 그냥 연락해볼래요!
+								   <br/>아........그녀가 너무 반갑게 맞아 줬어요.
+								   <br/>고마워요 ㅠㅠ. 내가 더 잘할께요.</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/12.png" alt="image05"/>
+								<div class="page" id="page12">
+								   <span>10월 3일, 그녀와 다시 자동차극장을 갔어요.
+								   <br/>헤헤..그녀가 너무 좋아요.
+								   <br/>참! 내가 포도좋아하는 걸 들켰어요.
+								   <br/>그녀는 망고알러지가 있다네요
+								   <br/>망고는 조심해야겠어요.</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/13.png" alt="image05"/>
+								<div class="page" id="page13">
+								   <span>10월 6일, 오늘 화산송이가 돌이란걸 처음알았어요.
+								   <br/>그녀가 베이비 파우더 향기가 좋다고했어요.
+								   <br/>저는 화산송이 향이 좋다고했어요.
+								   <br/>부끄러워서 숨고싶어요.</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/14.png" alt="image05"/>
+								<div class="page" id="page14">
+								   <span>10월 9일, 그녀와 오늘은 숲소리공원에 갔어요.
+								   <br/>최장시간 그녀와 보냈죠.
+								   <br/>그녀가 손안잡는 기록을 세워보자고 하네요.
+								   </br>왜 이렇게 그녀 앞에선 용기가 안날까요?</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/15.png" alt="image05"/>
+								<div class="page" id="page15">
+								   <span>10월 19일, 그녀가 처음 전화를 했어요!
+								   <br/>내목소리가 이승엽같다네요?
+								   <br/>칭찬이겠죠?
+								   <br/>일하는 내내 웃음이 나요</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/16.png" alt="image05"/>
+								<div class="page" id="page16">
+								   <span>10월 23일, 그녀와 칠암사계를 갔어요!
+								   <br/>테크길도 걸었구요.
+								   <br/>그녀가 먼저 팔짱을 꼇어요.
+								   <br/>순간.... 시간이 멈춘것 같았어요.
+								   <br/>너무 좋아서 김해까지 갔어요.</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/17.png" alt="image05"/>
+								<div class="page" id="page17">
+								   <span>10월 29일, 아버님 생신이래요
+								   <br/>이래서 다들 딸을 키우려고하는건가봐요.
+								   <br/>저도 부모님께 잘해야겠어요.
+								   <br/>이번엔 내려가서 저도 부모님과 시간을 좀 보내야겠어요.</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/18.png" alt="image05"/>
+								<div class="page" id="page18">
+								   <span>10월 30일, 그녀에게 장미 반지를 선물했어요.
+								   <br/>분위기 좋게 주면서 뽀뽀하려고했는데..
+								   <br/>저 왜이리 바보같죠?</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/19.png" alt="image05"/>
+								<div class="page" id="page19">
+								   <span>11월 6일, 그녀와 아홉산숲을 다녀왔어요! 
+								   <br/>대나무가 너무 장관이었어요.
+								   <br/>참! 내 실수로 영화를 못봤어요.
+								   <br/>그래도 같이 카페에서 영화본게 더 행복했어요.</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/20.png" alt="image05"/>
+								<div class="page" id="page20">
+								   <span>11월 13일, 그녀와 첫키스를 했어요.
+								   <br/>그때의 향기 숨소리 촉감 느낌....
+								   <br/>잊을수가 없을것같아요.</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/21.png" alt="image05"/>
+								<div class="page" id="page21">
+								   <span>11월 20일, 그녀와 처음 사랑을 나눴어요.
+								   <br/>너무 긴장해서 심장이 터질것 처럼 빨리뛰어요.
+								   <br/>근데 집으로 가는길이 왜이리 슬프죠..
+								   <br/>그녀가 안고만 있어도 좋데요.</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/22.png" alt="image05"/>
+								<div class="page" id="page22">
+								   <span>11월 22일, 그녀와 많이 가까워진것같아요.
+								   	<br/>그녀에게 잘 보이기위해 살을 좀 빼야겠어요.
+								   	<br/>근데 그녀가 연애만 하는게 어떻냐고 묻네요?
+								    <br/>뭐....그것도 나쁘지않겠죠?</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/23.png" alt="image05"/>
+								<div class="page" id="page23">
+								   <span>11월 25일, 처음 그녀가 자기 사진을 줬어요! 
+								   <br/>시간날때마다 계속 보게되요
+								   <br/>참! 그녀 귀여운척 하는 남자가 싫데요.
+								   <br/>예전에 상남자도 싫다고 했었던거같은데..</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/24.png" alt="image05"/>
+								<div class="page" id="page24">
+								   <span>11월 27일, 그녀에게 옷선물을 받았어요 
+								   <br/>계속 받기만 하네요.
+								   <br/>그녀는.. 뭘 좋아할까요?
+								   <br/>크리스마스땐 커플링을 준비해야겠어요!</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/25.png" alt="image05"/>
+								<div class="page" id="page25">
+								   <span>12월 1일, 요즘 꿈을 자주꾸네요.
+								   <br/>그녀가 보고싶은 가봐요.
+								   <br/>오늘 동료 여직원한테 자기야라고 보냈어요.
+								   <br/>요즘 전부 그녀로 보이네요.</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/26.png" alt="image05"/>
+								<div class="page" id="page26">
+								   <span>12월 4일, 그녀가 또 옷을 선물해줬어요.
+								   <br/>너무 이뻐요, 옷에 그녀가 영역표시도 했데요.
+								   <br/>저도 그녀가 보고싶어 했던 책들을 선물 했어요.
+								   <br/>보면 볼수록 그녀는 예뻐지네요.. </span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/27.png" alt="image05"/>
+								<div class="page" id="page27">
+								   <span>12월 9일, 전세계에 애인생겼다고 소문이 다 퍼진거같아요.
+								   <br/>회사도, 전화오는 사람들도 다들 축하한데요.
+								   <br/>그녀는 오늘 지인들과 생일파티 다녀온데요.
+								   <br/>약간 질투나네요.. 나도 같이 있고싶은데..</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/28.png" alt="image05"/>
+								<div class="page" id="page28">
+								   <span>12월 10일, 드디어 금요일이예요
+								   <br/>이제 매주 금요일마다 그녈 만나요.
+								   <br/>더 자주보고싶고..더 오래있고싶고..
+								   <br/>제가 그렇게 큰 욕심부리는건 아니죠?</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/29.png" alt="image05"/>
+								<div class="page" id="page29">
+								   <span>12월 11일, 그녀와 통도사에 왔어요
+								   <br/>정말 아름답고 넓어서 좋았어요.
+								   <br/>같이 손잡고 오래 걸을수있어서.....
+								   <br/>그리고 토곡요도 너무 예뻣어요.
+								   <br/>그녀가 절 강아지라고 부르네요. 맘에드네요?</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/30.png" alt="image05"/>
+								<div class="page" id="page30">
+								   <span>12월 17일, 그녀가 꽃선물을 줬어요.
+								   <br/>어머니 선물이라고..
+								   <br/>어떻게 이렇게 맘이 고운사람이 있을수있죠?
+								   <br/>저도 그녀 부모님께 잘 할꺼예요.</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/31.png" alt="image05"/>
+								<div class="page" id="page31">
+								   <span>12월 18일, 설레서 그런가 아침 일찍 깻어요. 
+								   <br/>그녀와 남포동, 깡통시장, 빛축제 가는 날이거든요!
+								   <br/>길거리는 벌써 부터 크리스마스 분위기예요.
+								   <br/>그녀는 참 웃는게 예쁜거 같아요.
+								   <br/>내가 항상 웃게 해줄꺼에요.</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/32.png" alt="image05"/>
+								<div class="page" id="page32">
+								   <span>12월 25일, 그녀와 처음 맞이하는 크리스마스예요. 
+								   <br/>함안으로 놀러갔어요, 후추도 보고 아라가야 고분도 보고..
+								   <br/>차에서 그녀에게 커플링을 줬어요.
+								   <br/>이제 그녀는 제꺼예요.</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/33.png" alt="image05"/>
+								<div class="page" id="page33">
+								   <span>1월 1일, 그녀와 처음 맞이하는 새해예요. 
+								   <br/>기장 웰빙공원이라는 곳에 왔어요.
+								   <br/>오리도.. 배도.. 흔들의자도 풍경도 너무 예뻣어요.
+								   <br/>빠리바게뜨 덕분에 준비한 멘트가 개그가 됐어요.
+								   <br/>그녀가 웃었으면 반은 성공한거죠?</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/34.png" alt="image05"/>
+								<div class="page" id="page34">
+								   <span>1월 8일, 오늘은 양산으로 놀러가요. 
+								   <br/>요세 그녀가 몸이 좀 않좋아 보여요.
+								   <br/>그래서 여자한테 좋다는 흑염소를 먹으러 가요.
+								   <br/>그리고 소화시킬겸 수원지에 놀러갔어요.
+								   <br/>해바라기 카페까지 갔어야 완벽했는데..</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/35.png" alt="image05"/>
+								<div class="page" id="page35">
+								   <span>1월 15일, 그녀가 캠핑을 가자네요?
+								   <br/>나 때매 돈을 너무 많이 쓰는건 아닌지 걱정이예요.
+								   <br/>캠핑장에서 같이한 요리는 너무 맛있었어요
+								   <br/>아! 그녀가 의자뺏기는 꿈을 꿧다네요!
+								   <br/>조심해야겠어요.</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/36.png" alt="image05"/>
+								<div class="page" id="page36">
+								   <span>1월 23일, 오늘은 그녀가 계획한대로 움직일꺼예요
+								   <br/>금정산에서 국수를 먹고 수목원으로!
+								   <br/>100일 선물로 줄 프로젝트를 생각성없이 크게 잡은거같아요
+								   <br/>걱정이네요 그때까지 맞출수있을지..</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/37.png" alt="image05"/>
+								<div class="page" id="page37">
+								   <span>1월 29일, 그녀와 99일이예요.
+								   <br/>하지만 100일 처럼 보낼꺼예요.
+								   <br/>이번엔 실수하지 않을꼐요</span>
+								</div>
+							</a>
+						</div>
+						<div class="bb-item">
+							<a href="#">
+								<img src="images/37.png" alt="image05"/>
+								<div class="page" id="page37">
+								   
+								</div>
+							</a>
+						</div>
+					</div>
+					<nav>
+						<!--<a id="bb-nav-first" href="#" class="bb-custom-icon bb-custom-icon-first">First page</a>-->
+						<a id="bb-nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a>
+						<a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
+						<a id="bb-nav-last" href="#" class="bb-custom-icon bb-custom-icon-last">Last page</a>
+					</nav>
+				</div>
+			</div>
+		</div><!-- /container -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/jquerypp.custom.js"></script>
+		<script src="js/jquery.bookblock.js"></script>
+		<script src="js/player/dist/jquery.button-audio-player.js"></script>
+		<script src="js/YTPlayer/dist/jquery.mb.YTPlayer.min.js"></script>
+		<script type="text/javascript" src="js/TypeWriting/build/typewriting.min.js"></script>
+
+		<script>
+			var isPlaying = false;
+			$(document).ready(function() {
+				$('#bar').buttonAudioPlayer({
+				    type: 'bar-animation',
+				    src: 'audio/History.mp3',
+				    loop: true,
+				});
+
+				var Page = (function() {
+				
+				var config = {
+					$bookBlock : $( '#bb-bookblock' ),
+					$navNext : $( '#bb-nav-next' ),
+					$navPrev : $( '#bb-nav-prev' ),
+					$navFirst : $( '#bb-nav-first' ),
+					$navLast : $( '#bb-nav-last' )
+				},
+				init = function() {
+					config.$bookBlock.bookblock( {
+						speed : 800,
+						shadowSides : 0.8,
+						shadowFlip : 0.7,
+						onEndFlip	: function( page, isLimit ) { 
+							if(page == 35 && isLimit == 36){
+								$(".bb-custom-wrapper").fadeOut(1000);
+								//$("header").fadeOut(1000);
+								$("#bar > button").click();
+								$( '.container' ).append('<iframe width="100%" height="70%" src="https://www.youtube.com/embed/O0w-6cFmcHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow="fullscreen;"></iframe>');
+							}
+							
+						}
+					});
+					initEvents();
+				},
+				initEvents = function() {
+					
+					var $slides = config.$bookBlock.children();
+
+					// add navigation events
+					config.$navNext.on( 'click touchstart', function() {
+						if(!isPlaying){
+							$("#bar > button").click();
+							isPlaying = true;
+						}
+						config.$bookBlock.bookblock( 'next' );
+						return false;
+					} );
+
+					config.$navPrev.on( 'click touchstart', function() {
+						config.$bookBlock.bookblock( 'prev' );
+						return false;
+					} );
+
+					config.$navFirst.on( 'click touchstart', function() {
+						config.$bookBlock.bookblock( 'first' );
+						return false;
+					} );
+
+					config.$navLast.on( 'click touchstart', function() {
+						config.$bookBlock.bookblock( 'last' );
+						return false;
+					} );
+					
+					// add swipe events
+					$slides.on( {
+						'swipeleft' : function( event ) {
+							config.$bookBlock.bookblock( 'next' );
+							return false;
+						},
+						'swiperight' : function( event ) {
+							config.$bookBlock.bookblock( 'prev' );
+							return false;
+						}
+					} );
+
+					// add keyboard events
+					$( document ).keydown( function(e) {
+						var keyCode = e.keyCode || e.which,
+							arrow = {
+								left : 37,
+								up : 38,
+								right : 39,
+								down : 40
+							};
+
+						switch (keyCode) {
+							case arrow.left:
+								config.$bookBlock.bookblock( 'prev' );
+								break;
+							case arrow.right:
+								config.$bookBlock.bookblock( 'next' );
+								break;
+						}
+					} );
+				};
+
+				return { init : init };
+			})();
+			Page.init();
+			$('#page1').typewriting( ". . . . . . . . . . . . . . . . 잠시만 기다려주세요", {
+				"typing_interval": 200,
+				"blink_interval": "1s",
+				"cursor_color": "#00fd55"
+			}, function() {
+			});
+			setTimeout( function(){
+				$('#page1').rewrite( "연애세포 살리는중 . . .  . . . . . .", function(){
+					console.log( "END, 2." );
+				});
+			}, 16300);
+			setTimeout( function(){
+				$('#page1').rewrite( "노래 연습중 . . . . . . .", function(){
+					console.log( "END, 3." );
+				});
+			}, 24300);
+			setTimeout( function(){
+				$('#page1').rewrite( "다음페이지를 눌러주세요 .", function(){
+					console.log( "END, 4." );
+				});
+			}, 32300);
+		});
+		</script>
+	</body>
+</html>
