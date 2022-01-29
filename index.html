@@ -517,14 +517,7 @@
 		<script type="text/javascript" src="js/TypeWriting/build/typewriting.min.js"></script>
 
 		<script>
-			var isPlaying = false;
 			$(document).ready(function() {
-				$('#bar').buttonAudioPlayer({
-				    type: 'bar-animation',
-				    src: 'audio/History.mp3',
-				    loop: true,
-				});
-
 				var Page = (function() {
 				
 				var config = {
@@ -542,8 +535,6 @@
 						onEndFlip	: function( page, isLimit ) { 
 							if(page == 35 && isLimit == 36){
 								$(".bb-custom-wrapper").fadeOut(1000);
-								//$("header").fadeOut(1000);
-								$("#bar > button").click();
 								$( '.container' ).append('<iframe width="100%" height="70%" src="https://www.youtube.com/embed/O0w-6cFmcHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow="fullscreen;"></iframe>');
 							}
 							
@@ -557,10 +548,6 @@
 
 					// add navigation events
 					config.$navNext.on( 'click touchstart', function() {
-						if(!isPlaying){
-							$("#bar > button").click();
-							isPlaying = true;
-						}
 						config.$bookBlock.bookblock( 'next' );
 						return false;
 					} );
