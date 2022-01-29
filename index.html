@@ -93,7 +93,7 @@
 			<!-- Top Navigation -->
 			<header>
 				<h1><a href="./index.html">그대라는 동화</a><span>a fairy tale called you</span></h1>	
-				<h3>Writer <a href="#">Lee Seung-gap</a></h3>
+				<h3>Writer Lee Seung-gap</h3>
 			</header>
 			<div class="main clearfix">
 				<div class="bb-custom-wrapper">
@@ -514,9 +514,18 @@
 		<script src="js/jquerypp.custom.js"></script>
 		<script src="js/jquery.bookblock.js"></script>
 		<script type="text/javascript" src="js/TypeWriting/build/typewriting.min.js"></script>
-
+		<script src="js/descrambler/dist/descrambler.js"></script>
 		<script>
+			<h3>Writer Lee Seung-gap</h3>
+			
 			$(document).ready(function() {
+				input = ">Writer Lee Seung-gap<",
+			    	duration = 10,
+			    	interval = 2,
+			    	characterSet = "alphanumeric",
+			    	$scramble.text(input);
+			    	$scramble.scramble(duration, interval, characterSet, fase);
+  
 				var Page = (function() {
 				
 				var config = {
