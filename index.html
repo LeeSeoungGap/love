@@ -72,6 +72,9 @@
 				header > h1 > a {
 					font-size : 22pt !important;
 				}
+				header > h2 {
+					font-size : 20pt !important;
+				}
 			}
 			
 			.container > header {
@@ -517,10 +520,11 @@
 		<script src="js/descrambler/dist/descrambler.js"></script>
 		<script>
 			$(document).ready(function() {
-				input = "Writer Lee Seung-gap";
-			    	duration = 10;
-			    	interval = 2;
-			    	characterSet = "alphanumeric";
+				var $scramble = $(".scramble");
+				var input = "Writer Lee Seung-gap";
+			    	var duration = 10;
+			    	var interval = 2;
+			    	var characterSet = "alphanumeric";
 			    	$scramble.text(input);
 			    	$scramble.scramble(duration, interval, characterSet, fase);
   
