@@ -535,6 +535,7 @@
 						onEndFlip	: function( page, isLimit ) { 
 							if(page == 35 && isLimit == 36){
 								$(".bb-custom-wrapper").fadeOut(1000);
+								$(".music").pause();
 								$( '.container' ).append('<iframe width="100%" height="70%" src="https://www.youtube.com/embed/O0w-6cFmcHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow="fullscreen;"></iframe>');
 							}
 							
