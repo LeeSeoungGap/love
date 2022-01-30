@@ -87,6 +87,25 @@
 			.main {
 				padding-top: 10px;
 			}
+			header {
+			    display: inline-block;
+			    font-family: arial;
+			    position: relative;
+			}
+			.header h1 {
+			    position: relative;
+			    margin: 1em 0 0;
+			    font-family: 'Lemon/Milk', cursive;
+			    color: #fff;
+			    z-index: 2;
+			}
+			.individual-bubble {
+			    position: absolute;
+			    border-radius: 100%;
+			    bottom: 10px;
+			    background-color: #fff;
+			    z-index: 1;
+			}
 		</style>
 	</head>
 	<body>
@@ -520,13 +539,42 @@
 		<script src="js/descrambler/dist/descrambler.js"></script>
 		<script>
 			$(document).ready(function() {
-				var $scramble = $(".scramble");
-				var input = "Writer Lee Seung-gap";
-			    	var duration = 10;
-			    	var interval = 2;
-			    	var characterSet = "alphanumeric";
-			    	$scramble.text(input);
-			    	$scramble.scramble(duration, interval, characterSet, false);
+				// Define a blank array for the effect positions. 
+			    	// This will be populated based on width of the title.
+				var bArray = [];
+				// Define a size array, this will be used to vary bubble sizes
+				var sArray = [4, 6, 8, 10];
+
+				// Push the header width values to bArray
+				for (var i = 0; i & lt; $('header').width(); i++) {
+					bArray.push(i);
+				}
+
+				// Function to select random array element
+				// Used within the setInterval a few times
+				function randomValue(arr) {
+					return arr[Math.floor(Math.random() * arr.length)];
+				}
+				// setInterval function used to create new bubble every 350 milliseconds
+				setInterval(function() {
+					// Get a random size, defined as variable so it can be used for 
+					// both width and height
+					var size = randomValue(sArray);
+					// New bubble appeneded to div with it's size and left position being set inline
+					// Left value is set through getting a random value from bArray
+					var styleElm = 'style="left: ' + randomValue(bArray) + 'px;';
+					styleElm = styleElm + 'width: ' + size + 'px; height:' + size + 'px;"';
+					$('.bubbles').append('<div class="individual-bubble"' + styleElm + '></div>');
+
+					// Animate each bubble to the top (bottom 100%) and reduce opacity as it moves
+					// Callback function used to remove finsihed animations from the page
+					$('.individual-bubble').animate({
+					    'bottom': '100%',
+					    'opacity': '-=0.7'
+					}, 3000, function() {
+					    $(this).remove()
+					});
+				    }, 350);
   
 				var Page = (function() {
 				
