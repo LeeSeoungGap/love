@@ -718,27 +718,6 @@
 				return { init : init };
 			})();
 			Page.init();
-			$('#page1').typewriting( ". . . . . . . . . . . . . . . . 잠시만 기다려주세요", {
-				"typing_interval": 200,
-				"blink_interval": "1s",
-				"cursor_color": "#00fd55"
-			}, function() {
-			});
-			setTimeout( function(){
-				$('#page1').rewrite( "연애세포 살리는중 . . .  . . . . . .", function(){
-					console.log( "END, 2." );
-				});
-			}, 16300);
-			setTimeout( function(){
-				$('#page1').rewrite( "노래 연습중 . . . . . . .", function(){
-					console.log( "END, 3." );
-				});
-			}, 24300);
-			setTimeout( function(){
-				$('#page1').rewrite( "다음페이지를 눌러주세요 .", function(){
-					console.log( "END, 4." );
-				});
-			}, 32300);
 			$('#bar').buttonAudioPlayer({
 		    	type: 'bar-animation',
 		    	src: 'audio/History.mp3'
@@ -754,7 +733,28 @@
 				$("#start").slideUp(1000);
 				$(".bb-custom-wrapper").fadeIn(1000, function(){
 					$(".bb-custom-wrapper").attr("style", "display:block");
-				}); 	
+				});
+				$('#page1').typewriting( ". . . . . . . . . . . . . . . . 잠시만 기다려주세요", {
+					"typing_interval": 200,
+					"blink_interval": "1s",
+					"cursor_color": "#00fd55"
+				}, function() {
+				});
+				setTimeout( function(){
+					$('#page1').rewrite( "연애세포 살리는중 . . .  . . . . . .", function(){
+						console.log( "END, 2." );
+					});
+				}, 16300);
+				setTimeout( function(){
+					$('#page1').rewrite( "노래 연습중 . . . . . . .", function(){
+						console.log( "END, 3." );
+					});
+				}, 24300);
+				setTimeout( function(){
+					$('#page1').rewrite( "다음페이지를 눌러주세요 .", function(){
+						console.log( "END, 4." );
+					});
+				}, 32300);
 			});
 		});
 		</script>
