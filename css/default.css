@@ -53,7 +53,7 @@ a img {
 
 .container > header {
 	text-align: center;
-	background: rgba(0,0,0,0.01);
+	background: rgba(0,0,0,0.5);
 }
 
 .container > header h1 {

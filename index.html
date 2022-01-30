@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
 		<!-- custom demo style -->
 		<link rel="stylesheet" type="text/css" href="css/demo1.css" />
+		<link rel="stylesheet" href="js/player/jquery.button-audio-player.css" />
 
 		<script src="js/modernizr.custom.js"></script>
 		<style>
@@ -28,8 +29,7 @@
     			background: pink;
 			}
 			#bar {
-				display: inline;
-				padding-left: 25px;
+				text-align: center;
 			}
 			body {
 				overflow: hidden;
@@ -103,6 +103,14 @@
 			    background-color: #fff;
 			    z-index: 1;
 			}
+			#start button {
+				text-align: center;
+			    border-radius: 2px;
+			    background: #72b890;
+			    color: #fff;
+			    margin: 2px;
+			    border: none;
+			}
 		</style>
 	</head>
 	<body>
@@ -111,7 +119,11 @@
 			<header>
 				<h1><a href="./index.html">그대라는 동화</a><span>a fairy tale called you</span></h1>	
 			</header>
+			<div id="bar"></div>
 			<div class="main clearfix">
+				<div id="start" style="text-align: center">
+					<button id="startBtn" style="width:50px; height:40px">시작</button>
+				</div>
 				<div class="bb-custom-wrapper">
 					<div id="bb-bookblock" class="bb-bookblock">
 						<div class="bb-item">
@@ -525,11 +537,52 @@
 					</nav>
 				</div>
 			</div>
+			<div id="app-cover">
+		        <div id="bg-artwork"></div>
+		        <div id="bg-layer"></div>
+		        <div id="player">
+		            <div id="player-track">
+		                <div id="album-name"></div>
+		                <div id="track-name"></div>
+		                <div id="track-time">
+		                    <div id="current-time"></div>
+		                    <div id="track-length"></div>
+		                </div>
+		                <div id="s-area">
+		                    <div id="ins-time"></div>
+		                    <div id="s-hover"></div>
+		                    <div id="seek-bar"></div>
+		                </div>
+		            </div>
+		            <div id="player-content">
+		               
+		                <div id="player-controls">
+		                    <div class="control">
+		                        <div class="button" id="play-previous">
+		                            <i class="fas fa-backward"></i>
+		                        </div>
+		                    </div>
+		                    <div class="control">
+		                        <div class="button" id="play-pause-button">
+		                            <i class="fas fa-play"></i>
+		                        </div>
+		                    </div>
+		                    <div class="control">
+		                        <div class="button" id="play-next">
+		                            <i class="fas fa-forward"></i>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
 		</div><!-- /container -->
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="js/jquerypp.custom.js"></script>
 		<script src="js/jquery.bookblock.js"></script>
 		<script src="js/TypeWriting/build/typewriting.min.js"></script>
+		<script src="js/player/jquery.button-audio-player.js"></script>
 		<script>
 			$(document).ready(function() {
 				// Define a blank array for the effect positions. 
@@ -675,6 +728,23 @@
 					console.log( "END, 4." );
 				});
 			}, 32300);
+			$('#bar').buttonAudioPlayer({
+		    	type: 'bar-animation',
+		    	src: 'audio/History.mp3'
+		  	});
+			
+			$('#bar').on("click", function(){
+				$('#bar > button').attr('style', 'width: 100% !important');
+			});
+			$(".bb-custom-wrapper").hide(); 
+			
+			$("#startBtn").on("click", function(){
+				$('#bar > button').click();
+				$("#start").slideUp(1000);
+				$(".bb-custom-wrapper").fadeIn(1000, function(){
+					$(".bb-custom-wrapper").attr("style", "display:block");
+				}); 	
+			})
 		});
 		
 
