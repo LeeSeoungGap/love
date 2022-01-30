@@ -546,7 +546,7 @@
 				var sArray = [4, 6, 8, 10];
 
 				// Push the header width values to bArray
-				for (var i = 0; i & lt; $('header').width(); i++) {
+				for (var i = 0; i < $('header').width(); i++) {
 					bArray.push(i);
 				}
 
@@ -564,7 +564,7 @@
 					// Left value is set through getting a random value from bArray
 					var styleElm = 'style="left: ' + randomValue(bArray) + 'px;';
 					styleElm = styleElm + 'width: ' + size + 'px; height:' + size + 'px;"';
-					$('.bubbles').append('<div class="individual-bubble"' + styleElm + '></div>');
+					$('header').append('<div class="individual-bubble"' + styleElm + '></div>');
 
 					// Animate each bubble to the top (bottom 100%) and reduce opacity as it moves
 					// Callback function used to remove finsihed animations from the page
