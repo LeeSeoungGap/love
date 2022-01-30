@@ -90,7 +90,7 @@
 		</style>
 	</head>
 	<body>
-		<audio id="music" loop src="audio/History.mp3" autoplay> </audio>
+		<audio id="music" loop src="audio/History.mp3"> </audio>
 		
 		<div class="container">
 			<!-- Top Navigation -->
@@ -619,6 +619,7 @@
 				"blink_interval": "1s",
 				"cursor_color": "#00fd55"
 			}, function() {
+				music.play();
 			});
 			setTimeout( function(){
 				$('#page1').rewrite( "연애세포 살리는중 . . .  . . . . . .", function(){
