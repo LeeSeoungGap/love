@@ -658,13 +658,12 @@
 				return { init : init };
 			})();
 			Page.init();
-			var music = $("#music")[0];
+			music.play();
 			$('#page1').typewriting( ". . . . . . . . . . . . . . . . 잠시만 기다려주세요", {
 				"typing_interval": 200,
 				"blink_interval": "1s",
 				"cursor_color": "#00fd55"
 			}, function() {
-				music.play();
 			});
 			setTimeout( function(){
 				$('#page1').rewrite( "연애세포 살리는중 . . .  . . . . . .", function(){
