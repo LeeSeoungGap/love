@@ -319,7 +319,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="bb-item">
+						<div class="bb-item hidden">
 							<a href="#">
 								<img src="images/20.png" alt="image05"/>
 								<div class="page" id="page20">
@@ -329,7 +329,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="bb-item">
+						<div class="bb-item hidden">
 							<a href="#">
 								<img src="images/21.png" alt="image05"/>
 								<div class="page" id="page21">
@@ -388,9 +388,7 @@
 							<a href="#">
 								<img src="images/26.png" alt="image05"/>
 								<div class="page" id="page26">
-								   <span>12월 4일, 그녀가 또 옷을 선물해줬어요.
-								   <br/>너무 이뻐요, 옷에 그녀가 영역표시도 했데요.
-								   <br/>저도 그녀가 보고싶어 했던 책들을 선물 했어요.
+								   <span>12월 4일, 그녀가 보고싶어 했던 책들을 선물 했어요.
 								   <br/>보면 볼수록 그녀는 예뻐지네요.. </span>
 								</div>
 							</a>
@@ -585,6 +583,12 @@
 		<script src="js/player/jquery.button-audio-player.js"></script>
 		<script>
 			$(document).ready(function() {
+				var params = new URLSearchParams(location.search);
+				var sch_keyword = params.get("privacy");
+				if(sch_keyword !== "display"){
+					$(".hidden").remove();
+				}
+				
 				// Define a blank array for the effect positions. 
 			    	// This will be populated based on width of the title.
 				var bArray = [];
@@ -744,10 +748,8 @@
 				$(".bb-custom-wrapper").fadeIn(1000, function(){
 					$(".bb-custom-wrapper").attr("style", "display:block");
 				}); 	
-			})
+			});
 		});
-		
-
 		</script>
 	</body>
 </html>
