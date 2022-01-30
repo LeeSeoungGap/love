@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
 		<!-- custom demo style -->
 		<link rel="stylesheet" type="text/css" href="css/demo1.css" />
+
 		<script src="js/modernizr.custom.js"></script>
 		<style>
 			@font-face {
@@ -105,9 +106,6 @@
 		</style>
 	</head>
 	<body>
-		
-		<audio id="music" loop src="audio/History.mp3"> </audio>
-		
 		<div class="container">
 			<!-- Top Navigation -->
 			<header>
@@ -531,8 +529,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="js/jquerypp.custom.js"></script>
 		<script src="js/jquery.bookblock.js"></script>
-		<script type="text/javascript" src="js/TypeWriting/build/typewriting.min.js"></script>
-		<script src="js/descrambler/dist/descrambler.js"></script>
+		<script src="js/TypeWriting/build/typewriting.min.js"></script>
 		<script>
 			$(document).ready(function() {
 				// Define a blank array for the effect positions. 
@@ -589,8 +586,7 @@
 						onEndFlip	: function( page, isLimit ) { 
 							if(page == 35 && isLimit == 36){
 								$(".bb-custom-wrapper").fadeOut(1000);
-								$(".music").pause();
-								$( '.container' ).append('<iframe width="100%" height="70%" src="https://www.youtube.com/embed/O0w-6cFmcHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow="fullscreen;"></iframe>');
+								
 							}
 							
 						}
@@ -658,7 +654,6 @@
 				return { init : init };
 			})();
 			Page.init();
-			music.play();
 			$('#page1').typewriting( ". . . . . . . . . . . . . . . . 잠시만 기다려주세요", {
 				"typing_interval": 200,
 				"blink_interval": "1s",
@@ -681,6 +676,8 @@
 				});
 			}, 32300);
 		});
+		
+
 		</script>
 	</body>
 </html>
